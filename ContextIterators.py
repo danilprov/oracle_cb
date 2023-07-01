@@ -293,9 +293,9 @@ class MSLRContextIterator2(object):
         self.doc_features = [5*i-1 for i in range(1,26)]
 
         if train:
-            self.fname = settings.DATA_DIR+"mslr/mslr_train.npz"
+            self.fname = settings.DATA_DIR+"mslr/mslr30k_train.npz"
         else:
-            self.fname = settings.DATA_DIR+"mslr/mslr_vali.npz"
+            self.fname = settings.DATA_DIR+"mslr/mslr30k_vali.npz"
         self.loop = loop
         self.f = np.load(self.fname)
         self.relevances = self.f['relevances']
